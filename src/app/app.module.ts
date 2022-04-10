@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { WidgetWrapperComponent } from './components/widget-wrapper/widget-wrapper.component';
 import { RonSwansonComponent } from './components/ron-swanson/ron-swanson.component';
+import { FriendsComponent } from './components/friends/friends.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetWrapperComponent,
-    RonSwansonComponent
+    RonSwansonComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,
