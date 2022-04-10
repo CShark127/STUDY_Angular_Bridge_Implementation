@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
+// Components
 import { WidgetWrapperComponent } from './components/widget-wrapper/widget-wrapper.component';
 import { RonSwansonComponent } from './components/ron-swanson/ron-swanson.component';
 import { FriendsComponent } from './components/friends/friends.component';
@@ -22,7 +25,8 @@ import { FriendsComponent } from './components/friends/friends.component';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
