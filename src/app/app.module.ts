@@ -14,21 +14,32 @@ import { WidgetWrapperComponent } from './components/widget-wrapper/widget-wrapp
 import { RonSwansonComponent } from './components/ron-swanson/ron-swanson.component';
 import { FriendsComponent } from './components/friends/friends.component';
 
+// Libraries
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
 @NgModule({
   declarations: [
     AppComponent,
     WidgetWrapperComponent,
     RonSwansonComponent,
-    FriendsComponent
+    FriendsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    HighlightModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      },
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

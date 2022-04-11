@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: solid 1px red;
+
+  img {
+    width: 75px;
+  }
+}
