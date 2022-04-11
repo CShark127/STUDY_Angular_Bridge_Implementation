@@ -9,10 +9,13 @@ import { WIDGET } from './widget.token';
 })
 export class WidgetWrapperComponent implements OnInit {
   @ContentChild(WIDGET, { static: true }) widget!: IWidget;
+  public buttonTitle: string = '';
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.buttonTitle = this.widget.buttonTitle;
+  }
 
   refresh() {
     this.widget.refresh();

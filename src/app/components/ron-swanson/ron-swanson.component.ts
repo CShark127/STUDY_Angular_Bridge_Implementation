@@ -9,23 +9,31 @@ import { WIDGET } from '../widget-wrapper/widget.token';
   selector: 'app-ron-swanson',
   templateUrl: './ron-swanson.component.html',
   styleUrls: ['./ron-swanson.component.scss'],
-  providers: [{
-    provide: WIDGET,
-    useExisting: RonSwansonComponent
-  }]
+  providers: [
+    {
+      provide: WIDGET,
+      useExisting: RonSwansonComponent,
+    },
+  ],
 })
 export class RonSwansonComponent implements OnInit, IWidget {
+  public buttonTitle = 'New Quote';
   public currentQuote!: Observable<string>;
-  public isLoading = false
+  public isLoading = false;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.refresh()
+    this.refresh();
   }
 
   refresh() {
-    this.currentQuote = this.api.getRonSwansonQoute()
+    this.isLoading = true;
+    setTimeout(() => this.getNewQuote(), 1000);
   }
 
+  getNewQuote() {
+    this.currentQuote = this.api.getRonSwansonQoute();
+    this.isLoading = false;
+  }
 }
