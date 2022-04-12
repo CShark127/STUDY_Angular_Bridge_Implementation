@@ -14,18 +14,16 @@ import { MatTabsModule } from '@angular/material/tabs';
 // Components
 import { WidgetWrapperComponent } from './components/widget-wrapper/widget-wrapper.component';
 import { RonSwansonComponent } from './components/ron-swanson/ron-swanson.component';
-import { FriendsComponent } from './components/friends/friends.component';
+import { DogImageComponent } from './components/dog-image/dog-image.component';
 
 // Libraries
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { DogImageComponent } from './components/dog-image/dog-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetWrapperComponent,
     RonSwansonComponent,
-    FriendsComponent,
     DogImageComponent,
   ],
   imports: [
