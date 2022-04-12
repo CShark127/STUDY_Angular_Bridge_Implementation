@@ -18,6 +18,7 @@ import { FriendsComponent } from './components/friends/friends.component';
 
 // Libraries
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { DogImageComponent } from './components/dog-image/dog-image.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     WidgetWrapperComponent,
     RonSwansonComponent,
     FriendsComponent,
+    DogImageComponent,
   ],
   imports: [
     BrowserModule,
